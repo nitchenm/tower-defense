@@ -1,3 +1,65 @@
-[gd_scene format=3 uid="uid://eycj3ghduixh"]
+[gd_scene load_steps=8 format=3 uid="uid://eycj3ghduixh"]
+
+[ext_resource type="PackedScene" uid="uid://m81rutq43dol" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-square.glb" id="1_i5arm"]
+[ext_resource type="PackedScene" uid="uid://cb05rlwx72vhk" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-straight.glb" id="2_wc5p8"]
+[ext_resource type="PackedScene" uid="uid://bilmmx6kc4y2v" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile.glb" id="3_jsk3o"]
+[ext_resource type="PackedScene" uid="uid://cnpwlewqryggg" path="res://kenney_tower-defense-kit/Models/GLB format/tower-round-build-a.glb" id="4_4arys"]
+[ext_resource type="Script" uid="uid://b72bnkesow1x2" path="res://kenney_tower-defense-kit/Models/GLB format/TowerScript.cs" id="5_6iypd"]
+[ext_resource type="PackedScene" uid="uid://cbsqtrbavk786" path="res://kenney_tower-defense-kit/Models/GLB format/weapon-turret.glb" id="6_tereu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cdqbm"]
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32.3295)
+
+[node name="snow-tile-corner-square2" parent="." instance=ExtResource("1_i5arm")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -4, 0, -44.4)
+
+[node name="snow-tile-straight2" parent="." instance=ExtResource("2_wc5p8")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -4, 0, -36.4)
+
+[node name="snow-tile-straight3" parent="." instance=ExtResource("2_wc5p8")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -4, 0, -28.4)
+
+[node name="snow-tile2" parent="." instance=ExtResource("3_jsk3o")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 4, 0, -36.4)
+
+[node name="snow-tile3" parent="." instance=ExtResource("3_jsk3o")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 4, 0, -28.4)
+
+[node name="snow-tile-corner-square3" parent="." instance=ExtResource("1_i5arm")]
+transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -4, 0, -20.4)
+
+[node name="snow-tile-straight4" parent="." instance=ExtResource("2_wc5p8")]
+transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, 4, 0, -20.4)
+
+[node name="snow-tile-straight5" parent="." instance=ExtResource("2_wc5p8")]
+transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, 4, 0, -44.4)
+
+[node name="snow-tile-corner-square4" parent="." instance=ExtResource("1_i5arm")]
+transform = Transform3D(-3.49691e-07, 0, -8, 0, 8, 0, 8, 0, -3.49691e-07, 12, 0, -44.4)
+
+[node name="snow-tile-corner-square5" parent="." instance=ExtResource("1_i5arm")]
+transform = Transform3D(-8, 0, -6.99382e-07, 0, 8, 0, 6.99382e-07, 0, -8, 12, 0, -20.4)
+
+[node name="snow-tile-straight6" parent="." instance=ExtResource("2_wc5p8")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 12, 0, -28.4)
+
+[node name="snow-tile-straight7" parent="." instance=ExtResource("2_wc5p8")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 12, 0, -36.4)
+
+[node name="Turret" type="Node3D" parent="."]
+
+[node name="tower-round-build-a2" parent="Turret" instance=ExtResource("4_4arys")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 4.00569, 1.62425, -28.254)
+script = ExtResource("5_6iypd")
+
+[node name="weapon-turret2" parent="Turret" instance=ExtResource("6_tereu")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 4.2771, 8.54591, -28.5837)
+
+[node name="Marker3D" type="Marker3D" parent="Turret/weapon-turret2"]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0.00308877, 0.340554, 0.323693)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Turret"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 3.95118, 6.18657, -28.232)
+shape = SubResource("SphereShape3D_cdqbm")
