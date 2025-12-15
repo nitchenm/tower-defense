@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://p1dmyo6kby8u"]
+
+[ext_resource type="PackedScene" uid="uid://82gmepq0j0ow" path="res://kenney_tower-defense-kit/Models/FBX format/snow-tile.fbx" id="1_0yf7p"]
+[ext_resource type="PackedScene" uid="uid://doywwgrxi4qle" path="res://kenney_tower-defense-kit/Models/FBX format/snow-tile-straight.fbx" id="2_i0ccq"]
+[ext_resource type="PackedScene" uid="uid://8uj7qextoxme" path="res://kenney_tower-defense-kit/Models/FBX format/snow-tile-corner-round.fbx" id="3_mxojo"]
+[ext_resource type="PackedScene" uid="uid://5lbyj8n1vwih" path="res://kenney_tower-defense-kit/Models/FBX format/snow-tile-crossing.fbx" id="4_4w2uj"]
+
+[node name="SetupTiles" type="Node3D"]
+
+[node name="Suelo" parent="." instance=ExtResource("1_0yf7p")]
+transform = Transform3D(0.9999977, -0.002199106, 0, 0.002199106, 0.9999977, 0, 0, 0, 1, -1.1597161, 0.015051603, -0.05806148)
+
+[node name="Camino_Recto" parent="." instance=ExtResource("2_i0ccq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16417381, 0.27128696, 1.0239825)
+
+[node name="Camino_Curva" parent="." instance=ExtResource("3_mxojo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14018667, 0.023655951, -0.95446074)
+
+[node name="Camino_Cruce" parent="." instance=ExtResource("4_4w2uj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.055021584, 0.06529409, 0.022963047)
