@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://gswp2buhniyo"]
+
+[ext_resource type="PackedScene" uid="uid://dpay0kee65vt6" path="res://kenney_tower-defense-kit/Models/GLB format/tower-round-base.glb" id="1_5l4jx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fm18h"]
+
+[node name="TorreBase" type="StaticBody3D"]
+
+[node name="tower-round-base2" parent="." instance=ExtResource("1_5l4jx")]
+transform = Transform3D(1, 0, 0, 0, 0.9980984, -0.061640836, 0, 0.061640836, 0.9980984, 0.014746904, -0.13249874, -0.0052511096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_fm18h")
