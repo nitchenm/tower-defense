@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1h16dedp65c"]
+
+[ext_resource type="Script" uid="uid://dkpxo7qg0s54j" path="res://Turret.cs" id="1_0ek1d"]
+[ext_resource type="PackedScene" uid="uid://b84k5vgo8vnyj" path="res://bullet.tscn" id="2_2gvus"]
+[ext_resource type="PackedScene" uid="uid://cnpwlewqryggg" path="res://kenney_tower-defense-kit/Models/GLB format/tower-round-build-a.glb" id="3_0f6ex"]
+[ext_resource type="PackedScene" uid="uid://cbsqtrbavk786" path="res://kenney_tower-defense-kit/Models/GLB format/weapon-turret.glb" id="4_75l1c"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cdqbm"]
+
+[node name="Torreta" type="Node3D" node_paths=PackedStringArray("_rangoVision", "_puntoDisparo", "_cabeza")]
+script = ExtResource("1_0ek1d")
+BalaPrefab = ExtResource("2_2gvus")
+_rangoVision = NodePath("RangoVision")
+_puntoDisparo = NodePath("Cabeza/PuntoDisparo")
+_cabeza = NodePath("Cabeza")
+
+[node name="Base" parent="." instance=ExtResource("3_0f6ex")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+
+[node name="Cabeza" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+
+[node name="PuntoDisparo" type="Marker3D" parent="Cabeza"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0451016, 0.00997543, -3.43313)
+
+[node name="CañonVisual" parent="Cabeza" instance=ExtResource("4_75l1c")]
+transform = Transform3D(-8, 0, -6.99382e-07, 0, 8, 0, 6.99382e-07, 0, -8, 0.0203919, -2.71441, -0.117599)
+
+[node name="RangoVision" type="Area3D" parent="."]
+
+[node name="Collision" type="CollisionShape3D" parent="RangoVision"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 5, 0)
+shape = SubResource("SphereShape3D_cdqbm")
