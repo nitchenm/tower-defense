@@ -1,0 +1,157 @@
+[gd_scene load_steps=22 format=3 uid="uid://cw7g3uk4c38a5"]
+
+[ext_resource type="PackedScene" uid="uid://cfxjx3sml7qfw" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-bump.glb" id="1_wf1lk"]
+[ext_resource type="PackedScene" uid="uid://ba7d6m2pi3tfu" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-inner.glb" id="2_bpvb4"]
+[ext_resource type="PackedScene" uid="uid://kywx7686legl" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-outer.glb" id="3_gxvts"]
+[ext_resource type="PackedScene" uid="uid://caec31ayh12vl" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-round.glb" id="4_wlfyn"]
+[ext_resource type="PackedScene" uid="uid://m81rutq43dol" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-square.glb" id="5_b88dk"]
+[ext_resource type="PackedScene" uid="uid://cvamksyfegrsx" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-crossing.glb" id="6_77crl"]
+[ext_resource type="PackedScene" uid="uid://c6t68s3hkbs8w" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-crystal.glb" id="7_aout0"]
+[ext_resource type="PackedScene" uid="uid://d0fxia18xn741" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-dirt.glb" id="8_h0lng"]
+[ext_resource type="PackedScene" uid="uid://nhq5hidyoq04" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-end-round.glb" id="9_ldw2b"]
+[ext_resource type="PackedScene" uid="uid://db852lkgyv6nd" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-end.glb" id="10_j0juc"]
+[ext_resource type="PackedScene" uid="uid://bkyyxteb83duu" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-hill.glb" id="11_1ixex"]
+[ext_resource type="PackedScene" uid="uid://bdduy4hc7pdoq" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-rock.glb" id="12_f8y8v"]
+[ext_resource type="PackedScene" uid="uid://c8fklxgaw2ybj" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-slope.glb" id="13_beigf"]
+[ext_resource type="PackedScene" uid="uid://ctryi7572df4e" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-spawn-end-round.glb" id="14_w5lbn"]
+[ext_resource type="PackedScene" uid="uid://cmutig77xbpn7" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-spawn-end.glb" id="15_mia6s"]
+[ext_resource type="PackedScene" uid="uid://cngjxkb3a44i2" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-split.glb" id="16_kw03b"]
+[ext_resource type="PackedScene" uid="uid://cb05rlwx72vhk" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-straight.glb" id="17_rjmj0"]
+[ext_resource type="PackedScene" uid="uid://dbmj2jvy4ufrl" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-tree-double.glb" id="18_nteh6"]
+[ext_resource type="PackedScene" uid="uid://bur32t6627knv" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-tree-quad.glb" id="19_fxb50"]
+[ext_resource type="PackedScene" uid="uid://ufiiqkdk5y8" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile-tree.glb" id="20_gt7st"]
+[ext_resource type="PackedScene" uid="uid://bilmmx6kc4y2v" path="res://kenney_tower-defense-kit/Models/GLB format/snow-tile.glb" id="21_0vh0w"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="snow-tile-bump2" parent="." instance=ExtResource("1_wf1lk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 0, 2)
+
+[node name="snow-tile-corner-inner2" parent="." instance=ExtResource("2_bpvb4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7, 0, 2)
+
+[node name="snow-tile-corner-outer2" parent="." instance=ExtResource("3_gxvts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+
+[node name="snow-tile-corner-round2" parent="." instance=ExtResource("4_wlfyn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, 2)
+
+[node name="snow-tile-corner-square2" parent="." instance=ExtResource("5_b88dk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="snow-tile-crossing2" parent="." instance=ExtResource("6_77crl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 7)
+
+[node name="snow-tile-crystal2" parent="." instance=ExtResource("7_aout0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 7)
+
+[node name="snow-tile-dirt2" parent="." instance=ExtResource("8_h0lng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 7)
+
+[node name="snow-tile-end-round2" parent="." instance=ExtResource("9_ldw2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 6)
+
+[node name="snow-tile-end2" parent="." instance=ExtResource("10_j0juc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 4)
+
+[node name="snow-tile-hill2" parent="." instance=ExtResource("11_1ixex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
+
+[node name="snow-tile-rock2" parent="." instance=ExtResource("12_f8y8v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="snow-tile-slope2" parent="." instance=ExtResource("13_beigf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+
+[node name="snow-tile-spawn-end-round2" parent="." instance=ExtResource("14_w5lbn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 0, 2)
+
+[node name="snow-tile-spawn-end2" parent="." instance=ExtResource("15_mia6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+
+[node name="snow-tile-split2" parent="." instance=ExtResource("16_kw03b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="snow-tile-straight2" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+
+[node name="snow-tile-tree-double2" parent="." instance=ExtResource("18_nteh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+
+[node name="snow-tile-tree-quad2" parent="." instance=ExtResource("19_fxb50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="snow-tile-tree2" parent="." instance=ExtResource("20_gt7st")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+
+[node name="snow-tile-tree2" parent="snow-tile-tree2" instance=ExtResource("20_gt7st")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="snow-tile2" parent="." instance=ExtResource("21_0vh0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+
+[node name="snow-tile-straight3" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
+
+[node name="snow-tile-straight4" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="snow-tile-straight5" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
+
+[node name="snow-tile-corner-round3" parent="." instance=ExtResource("4_wlfyn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 0, 2)
+
+[node name="snow-tile-straight6" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+
+[node name="snow-tile-straight7" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="snow-tile-straight8" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
+[node name="snow-tile-straight9" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="snow-tile-corner-round4" parent="." instance=ExtResource("4_wlfyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
+
+[node name="snow-tile-bump3" parent="." instance=ExtResource("1_wf1lk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, -3)
+
+[node name="snow-tile-corner-round5" parent="." instance=ExtResource("4_wlfyn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -3)
+
+[node name="snow-tile-straight10" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="snow-tile-straight11" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="snow-tile-straight7" parent="snow-tile-straight11" instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="snow-tile-straight12" parent="." instance=ExtResource("17_rjmj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="snow-tile-corner-round6" parent="." instance=ExtResource("4_wlfyn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, 2)
+
+[node name="snow-tile-tree-quad3" parent="." instance=ExtResource("19_fxb50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="snow-tile3" parent="." instance=ExtResource("21_0vh0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+
+[node name="snow-tile4" parent="." instance=ExtResource("21_0vh0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="snow-tile5" parent="." instance=ExtResource("21_0vh0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
+
+[node name="snow-tile-tree-double3" parent="." instance=ExtResource("18_nteh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="snow-tile6" parent="." instance=ExtResource("21_0vh0w")]
+transform = Transform3D(12.76, 0, 0, 0, 1, 0, 0, 0, 13.5669, -3, -0.12, 2)

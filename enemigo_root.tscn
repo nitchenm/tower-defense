@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://beuyoaq47g5sm"]
+
+[ext_resource type="Script" uid="uid://bbrre0c8qevj0" path="res://Enemy.cs" id="2_ckcp5"]
+[ext_resource type="PackedScene" uid="uid://5p5kmr8tdg7w" path="res://kenney_tower-defense-kit/Models/GLB format/enemy-ufo-a.glb" id="3_nidw2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i75nh"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_i75nh"]
+
+[sub_resource type="Gradient" id="Gradient_i75nh"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ylfs0"]
+gradient = SubResource("Gradient_i75nh")
+width = 1
+height = 1
+
+[node name="EnemigoRoot" type="PathFollow3D"]
+loop = false
+
+[node name="Cuerpo" type="CharacterBody3D" parent="." node_paths=PackedStringArray("BarraVidaVisual") groups=["Enemigos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.677143, 0.134064, 0.277061)
+script = ExtResource("2_ckcp5")
+BarraVidaVisual = NodePath("BarraVidaRoot/Relleno")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cuerpo" groups=["Enemigos"]]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+skeleton = NodePath("enemy-ufo-a2")
+
+[node name="enemy-ufo-a2" parent="Cuerpo/MeshInstance3D" instance=ExtResource("3_nidw2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cuerpo"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1.76133, 0)
+shape = SubResource("SphereShape3D_i75nh")
+debug_color = Color(0.457596, 0.467309, 0.947365, 0.42)
+
+[node name="BarraVidaRoot" type="Node3D" parent="Cuerpo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12973, 5.7344, -0.948114)
+
+[node name="Fondo" type="Sprite3D" parent="Cuerpo/BarraVidaRoot"]
+transform = Transform3D(500, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0)
+sorting_use_aabb_center = false
+centered = false
+modulate = Color(0.891291, 4.18738e-06, 8.66354e-07, 1)
+billboard = 1
+double_sided = false
+alpha_cut = 1
+render_priority = -1
+texture = SubResource("PlaceholderTexture2D_i75nh")
+
+[node name="Relleno" type="Sprite3D" parent="Cuerpo/BarraVidaRoot"]
+transform = Transform3D(500, 0, 0, 0, 50, 0, 0, 0, 1, 0, 0, 0)
+sorting_use_aabb_center = false
+centered = false
+modulate = Color(0.109725, 0.49883, 2.88785e-07, 1)
+billboard = 1
+double_sided = false
+alpha_cut = 1
+render_priority = 1
+texture = SubResource("GradientTexture2D_ylfs0")
